@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../out/min.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 300px;
+        }
+
+        h1.header {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #616161;
+        }
+
+        hr.line {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid lightgray;
+            margin: 1.2rem 0;
+        }
+
+        .btn-group {
+            display: inline-flex;
+        }
+
+        .btn-group .btn {
+            border-radius: 0;
+            border-right: 1px solid rgb(0, 0, 0, 0.35);
+        }
+
+        .btn-group .btn:first-child {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        .btn-group .btn:last-child {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>buttons</h1>
+        <hr class="line">
+        <p>
+            no-style host elements
+        </p>
+
+        <div>Click Me</div>
+        <a href="#">Click Me</a>
+        <span>Click Me</span>
+        <button>Click Me</button>
+        <input type="button" value="Click Me">
+
+        <hr class="line">
+        <p>
+            styles working!!!
+        </p>
+
+        <div class="btn btn-primary">Click Me</div>
+        <a class="btn btn-primary" href="#">Click Me</a>
+        <span class="btn btn-primary">Click Me</span>
+        <button class="btn btn-primary">Click Me</button>
+        <input class="btn btn-primary" type="button" value="Click Me">
+
+        <hr class="line">
+        <p>
+            scale it? just reset <b>font size</b>!!!
+        </p>
+        <a class="btn btn-primary" href="#">Click Me</a>
+        <span class="btn btn-primary" style="font-size:50%;">Click Me</span>
+        <button class="btn btn-primary" style="font-size:150%;">Click Me</button>
+        <span>YOU CAN REALIGN THE BASELINE TO MIDDLE.</span><br><br>
+
+        <a class="btn btn-primary" href="#" style="vertical-align:middle;">Click Me</a>
+        <span class="btn btn-primary" style="font-size:50%;vertical-align:middle;">Click Me</span>
+        <button class="btn btn-primary" style="font-size:150%;vertical-align:middle;">Click Me</button>
+        <span>YOU CAN SEE ALIGN TO MIDDLE ALREADY. ALSO FLEX IS RECOMMEND TOO.</span>
+
+        <div style="display:inline-flex;align-items:center;margin:15px 0;">
+            <a class="btn btn-primary" href="#">Click Me</a>
+            <span class="btn btn-primary" style="font-size:50%;">Click Me</span>
+            <button class="btn btn-primary" style="font-size:150%;">Click Me</button>
+        </div>
+        <span>IN A FLEX WAY.</span>
+
+        <hr class="line">
+        <p>
+            need a fixed width??? maybe <b>150px</b>???
+        </p>
+        <div class="btn btn-primary" style="width:150px;">Click Me</div>
+        <a class="btn btn-primary" href="#" style="width:150px;">Click Me</a>
+        <span class="btn btn-primary" style="width:150px;">Click Me</span>
+        <button class="btn btn-primary" style="width:150px;">Click Me</button>
+        <input class="btn btn-primary" type="button" value="Click Me" style="width:150px;">
+
+        <hr class="line">
+        <p>
+            need a fixed height??? maybe <b>80px</b> or <b>120px</b>???
+        </p>
+
+        <div class="btn btn-primary" style="padding-top:0;padding-bottom:0;height:80px;line-height:80px;">
+            Click Me
+        </div>
+        <span class="btn btn-primary" style="padding-top:0;padding-bottom:0;height:80px;line-height:80px;">
+            <span>Click Me</span>
+        </span>
+        <button class="btn btn-primary" style="display:inline-flex;align-items:center;height:80px;vertical-align:top;">
+            Click Me
+        </button>
+        <button class="btn btn-primary" style="display:inline-flex;align-items:center;height:120px;vertical-align:top;">
+            <span class="iconfont icon-cart-full-fill"></span>
+            <span>Click Me</span>
+        </button>
+        <button class="btn btn-primary" style="display:inline-flex;align-items:center;height:120px;vertical-align:top;">
+            <span class="iconfont icon-cart-full-fill" style="font-size:300%;"></span>
+            <span style="font-size:150%;">Click Me</span>
+        </button>
+
+        <hr class="line">
+        <p>
+            how about a group!!!
+        </p>
+
+        <div class="btn-group">
+            <div class="btn btn-primary">Left</div>
+            <a class="btn btn-primary" href="#">Middle</a>
+            <span class="btn btn-primary">Right</span>
+        </div>
+
+        <hr class="line">
+        <p>
+            how about a forbidden one!!!
+        </p>
+
+        <!-- pointer-events also disabled the cursor with no -->
+        <!-- it is necessary, or your client event will be responded -->
+        <button onclick="alert('fuck!');" class="btn btn-primary"
+            style="cursor:not-allowed;pointer-events:none;opacity:0.5;">
+            Click Me
+        </button>
+
+        <p>wrong cursor? try another better way?</p>
+
+        <div style="cursor:not-allowed;opacity:0.5;">
+            <button onclick="alert('fuck!');" class="btn btn-primary" style="pointer-events:none;">
+                Click Me
+            </button>
+        </div>
+
+        <hr class="line">
+        <p>
+            test iconfont and bigger iconfont, 😎 means useful.
+        </p>
+
+        <span class="btn btn-primary">
+            <span class="iconfont icon-cart-full-fill" style="font-size:300%;vertical-align:middle;"></span>
+            <span style="font-size:150%;vertical-align: middle;">Click Me😎</span>
+        </span>
+        <button class="btn btn-primary">
+            <span class="iconfont icon-cart-full-fill"></span>
+            Click Me
+        </button>
+
+        <hr class="line">
+        <p>
+            test iconfont and bigger iconfont in a <b>HALF PADDING</b> button, <b>NOT RECOMMEND!!!</b>
+        </p>
+
+        <span class="btn inlineBtn btn-primary" style="line-height:70px;height:70px;">
+            <span class="iconfont icon-cart-full-fill"
+                style="display:inline-block;height:70px;line-height:70px;font-size:300%;vertical-align:middle;"></span>
+            <span style="display:inline-block;height:70px;line-height:70px;font-size:150%;vertical-align:middle;">Click
+                Mx😅</span>
+        </span>
+        <hr class="line">
+        <span class="btn inlineBtn btn-primary" style="line-height:70px;height:70px;">
+            <span class="iconfont icon-cart-full-fill"
+                style="display:inline-block;font-size:300%;line-height:70px;height:70px;"></span>
+            <span style="display:inline-block;font-size:150%;line-height:70px;height:70px;vertical-align:top;">Click
+                Me😎</span>
+        </span> Perfect One Sample
+        <span class="btn inlineBtn btn-primary" style="line-height:70px;height:70px;">
+            <span class="iconfont icon-cart-full-fill" style="font-size:300%;"></span>
+            <span style="font-size:150%;vertical-align:top;">Click Me😎</span>
+        </span> Same, Perfect But Less Code
+        <hr class="line">
+        <span class="btn inlineBtn btn-primary" style="line-height:70px;height:70px;">
+            <span class="iconfont icon-cart-full-fill"
+                style="display:inline-block;height:70px;line-height:70px;font-size:300%;vertical-align:middle;"></span>
+        </span>
+        <hr class="line">
+        <span class="btn inlineBtn btn-primary" style="line-height:70px;height:70px;">
+            <span style="display:inline-block;height:70px;line-height:70px;font-size:150%;vertical-align:middle;">Click
+                Mx🤔</span>
+        </span>
+
+        <hr class="line">
+        <p>
+            test iconfont and bigger iconfont in a <b>FLEX SYSTEM</b> button, <b>NOT RECOMMEND!!!</b>
+        </p>
+
+        <button class="btn btn-primary" style="display:inline-flex;align-items:center;">
+            <span class="iconfont icon-cart-full-fill" style="font-size:300%;"></span>
+            <span style="font-size: 150%;">Click Me😎</span>
+        </button>
+        <span>YOU CAN HAVE MORE LINES.</span>
+        <span>NOTICE IT HAS NO WHITE SPACE.</span>
+
+        <hr class="line">
+        <p>
+            test iconfont and bigger iconfont in a <b>HALF PADDING</b> button, by <b>FLEX SYSTEM</b>, <b>NOT
+                RECOMMEND!!!</b>
+        </p>
+
+        <span class="btn inlineBtn btn-primary"
+            style="display:inline-flex;align-items:center;line-height:70px;height:70px;">
+            <span class="iconfont icon-cart-full-fill" style="font-size:300%;"></span>
+            <span style="font-size:150%;">Click Me😎</span>
+        </span>
+        <span>YOU CAN HAVE MORE LINES.</span>
+        <span>NOTICE IT HAS NO WHITE SPACE.</span>
+
+    </div>
+</body>
+
+</html>

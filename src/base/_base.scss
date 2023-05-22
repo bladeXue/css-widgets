@@ -1,0 +1,6 @@
+// import with keeping `.css`
+// import normalize
+@use "../../node_modules/normalize.css/normalize.css";
+@use "../font/iconfont/iconfont.css";
+// as a global include
+@forward "../../node_modules/include-media/dist/include-media";

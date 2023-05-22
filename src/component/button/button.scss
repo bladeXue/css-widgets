@@ -1,0 +1,49 @@
+// 1. 已知宽度或者高度，那就用padding-left/right + line-height的做法，看`.inlineBtn`
+// 2. 如果是自由按钮，那就用padding全包来做
+// 3. 如果撑起来的盒子是一个文章容器，那就无所谓
+// 4. 不常用的情况就是一个纯内容盒子
+
+// can apply on <div>, <a>, <span>, <button>, partially on <input:button>
+// make the basic appearance of a button (a clickable element)
+.btn {
+    // box
+    display: inline-block; // necessary
+    box-sizing: border-box; // necessary
+    padding: 0.5rem 1rem; // necessary, using full-padding way
+
+    // border
+    border: none; // necessary, default button style with a ugly outline
+    border-radius: 2px; // not necessary, but it's a normal way to beautify
+    // text
+    font-size: 100%; // necessary
+    text-decoration: none; // necessary, <a>会有下划线
+    text-align: center; // <div><a>和<span>默认文字靠左，
+    // 如果你的按钮需要固定宽度，就需要额外居中
+
+
+    // vertical-align: middle;     // not necessary   但可以试试sub
+
+    // normalize
+    cursor: pointer; // necessary
+    user-select: none; // necessary
+    // -webkit-user-drag: none; // not necessary   
+
+    &:hover {
+        opacity: 0.75; // 对于文本可以text-decoration: underline;
+    }
+
+    &.btn-primary {
+        background-color: #0078e7;
+        color: #fff;
+    }
+}
+
+.inlineBtn {
+    // another way to make a box
+    // padding: 0 1rem !important;
+    // height: 2rem !important;
+    // line-height: 2rem !important;
+    padding: 0 1rem ;
+    height: 2rem  ;
+    line-height: 2rem ;
+}

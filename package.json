@@ -1,0 +1,19 @@
+{
+  "name": "css-widgets",
+  "version": "1.0.0",
+  "description": "A collection of practical css.",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch src/entry.scss out/min.css --style=compressed",
+    "sync": "browser-sync start --server --files \"out/**.css, index.html, demo/**.html\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.29.1",
+    "include-media": "^2.0.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.62.1"
+  }
+}

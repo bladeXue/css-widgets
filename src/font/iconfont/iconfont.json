@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "34452789",
+      "name": "cart-full-fill",
+      "font_class": "cart-full-fill",
+      "unicode": "e826",
+      "unicode_decimal": 59430
+    }
+  ]
+}

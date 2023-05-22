@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试Pure页面</title>
+
+    <!-- <link rel="stylesheet" href="buttons-core.css">
+    <link rel="stylesheet" href="buttons.css"> -->
+    <style>
+        body {
+            background-color: lightcoral;
+        }
+
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item {
+            flex: auto;
+            border: 1px solid lightblue;
+        }
+
+        .bg {
+            background-color: lightgray;
+        }
+
+        .p-button-core {
+            /* Structure */
+            display: inline-block;
+            line-height: normal;
+            white-space: nowrap;
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            -webkit-user-drag: none;
+            user-select: none;
+            box-sizing: border-box;
+        }
+
+        .p-button {
+            font-family: inherit;
+            font-size: 100%;
+            padding: 0.5em 1em;
+            color: rgba(0, 0, 0, 0.80);
+            border: none rgba(0, 0, 0, 0);
+            background-color: #E6E6E6;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+
+        .p-button {
+            background-color: rgb(0, 120, 231);
+            color: #fff;
+        }
+
+        .btn {
+
+            display: inline-block;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="item">
+            1
+        </div>
+        <div class="item">
+            2
+        </div>
+        <div class="item">
+            3
+        </div>
+        <div class="item">
+            4
+        </div>
+        <div class="item">
+            5
+        </div>
+    </div>
+
+    <p>no styles</p>
+    <div class="bg">
+        <div class="">Click</div>
+        <button class="">Click</button>
+        <a href="#" class="">Click</a>
+        <span class="">Click</span>
+        <input type="button" value="Click" class="">
+    </div>
+
+    <p>btn-core</p>
+    <div class="bg">
+        <div class="p-button-core">Click</div>
+        <button class="p-button-core">Click</button>
+        <a href="#" class="p-button-core">Click</a>
+        <span class="p-button-core">Click</span>
+        <input type="button" value="Click" class="p-button-core">
+    </div>
+
+    <p>btn</p>
+    <div class="bg">
+        <div class="p-button">Click</div>
+        <button class="p-button">Click</button>
+        <a href="#" class="p-button">Click</a>
+        <span class="p-button">Click</span>
+        <input type="button" value="Click" class="p-button">
+    </div>
+
+    <p>btn-core btn</p>
+    <div class="bg">
+        <div class="p-button-core p-button">Click</div>
+        <button class="p-button-core p-button">Click</button>
+        <a href="#" class="p-button-core p-button">Click</a>
+        <span class="p-button-core p-button">Click</span>
+        <input type="button" value="Click" class="p-button-core p-button">
+    </div>
+
+    <p>custom</p>
+    <div class="bg">
+        <button class="btn">Click</button>
+    </div>
+</body>
+
+</html>
